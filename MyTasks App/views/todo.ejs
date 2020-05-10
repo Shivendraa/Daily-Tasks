@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>My Day</title>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous"></script>
+        <script src="/assets/tasks.js"></script>
+    </head>
+    <body>
+        <h1>My Tasks App</h1>
+            <form>
+                <input type="text" name="item" placeholder="What are your plans today?" required>
+                <button type="submit">Add</button>
+            </form>
+
+            <ul>
+                <% for(var i=0; i < mytasks.length; i++){ %>
+                    <li><%= mytasks[i].item %></li>
+                <% }  %>
+            </ul>
+    </body>
+</html>
